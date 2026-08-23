@@ -67,8 +67,7 @@ public class Test5 {
         // 5. Verify registration
         String expectedWelcome =
                 "WELCOME, " + firstName + " " + lastName + "!";
-        String actualWelcome =
-                driver.findElement(
+        String actualWelcome =driver.findElement(
                         By.cssSelector("p.welcome-msg")).getText();
 
         System.out.println("Expected : " + expectedWelcome);
@@ -77,12 +76,11 @@ public class Test5 {
         Assert.assertEquals(actualWelcome.toUpperCase(), expectedWelcome.toUpperCase());
 
         // 6. Go to TV menu
-        driver.findElement(
-                By.xpath(".//*[@id='nav']/ol/li[2]/a")).click();
+        driver.findElement(By.linkText("TV")).click();
         Thread.sleep(2000);
         // 7. Add LG LCD to wishlist
         driver.findElement(
-                By.xpath("//li/a[@class='link-wishlist']")).click();
+                By.linkText("Add to Wishlist")).click();
         Thread.sleep(2000);
         // 8. Share Wishlist
         driver.findElement(
@@ -100,11 +98,12 @@ public class Test5 {
         // 10. Verify Wishlist shared
         String expectedWishList =
                 "Your Wishlist has been shared.";
-        String actualWishList =
-                driver.findElement(
-                        By.xpath(
-                                ".//*[@id='top']/body/div[1]/div/div[2]/div/div[2]/div/div[1]/ul/li/ul/li/span"
-                        )).getText();
+        String actualWishList = driver.findElement(
+                By.cssSelector("li.success-msg span")).getText();
+        //String actualWishList =
+                //driver.findElement(
+                        //By.xpath(
+                          //      ".//*[@id='top']/body/div[1]/div/div[2]/div/div[2]/div/div[1]/ul/li/ul/li/span")).getText();
         System.out.println("Expected Wishlist : " + expectedWishList);
         System.out.println("Actual Wishlist   : " + actualWishList);
 
