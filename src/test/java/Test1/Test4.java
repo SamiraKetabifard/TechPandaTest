@@ -74,8 +74,7 @@ public class Test4 {
         String strHead = "COMPARE PRODUCTS";
 
         String compHead = driver.findElement(
-                By.cssSelector("h1")
-        ).getText();
+                By.cssSelector("h1")).getText();
 
         System.out.println("compHead = " + compHead);
 

@@ -100,10 +100,6 @@ public class Test5 {
                 "Your Wishlist has been shared.";
         String actualWishList = driver.findElement(
                 By.cssSelector("li.success-msg span")).getText();
-        //String actualWishList =
-                //driver.findElement(
-                        //By.xpath(
-                          //      ".//*[@id='top']/body/div[1]/div/div[2]/div/div[2]/div/div[1]/ul/li/ul/li/span")).getText();
         System.out.println("Expected Wishlist : " + expectedWishList);
         System.out.println("Actual Wishlist   : " + actualWishList);
 
