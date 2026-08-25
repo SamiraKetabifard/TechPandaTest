@@ -25,6 +25,8 @@ public class Test11 {
     }
     @Test
     public void test1() {
+        // Step 1. Go to http://live.techpanda.org
+        driver.get("http://live.techpanda.org ");
 
     }
 
